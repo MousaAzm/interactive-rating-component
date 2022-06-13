@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: hsl(25, 97%, 53%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-grey: hsl(217, 12%, 63%);
+    --color-medium-grey: hsl(216, 12%, 54%);
+    --color-dark-blue: hsl(213, 19%, 18%);
+    --color-medium-dark-blue: hsl(215, 22%, 16%);;
+    --color-very-dark-blue: hsl(216, 12%, 8%);
+    --font-size: 15px;
+    --font-family: 'Overpass', sans-serif;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--color-white);
+}
+
+p {
+    color: var(--color-light-grey);
+    line-height: 23px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+h2{
+    font-size: 23px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    padding-top: 32px;
+    padding-bottom: 10px;
+}
+
+.page-pg {
+    background-color: var(--color-very-dark-blue);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.card {
+   
+    display: block;
+    opacity: 1;
+}
+.card, .modal {
+    width: 100%;
+    max-width: 365px;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: var(--color-medium-dark-blue);
+}
+.card .card-star img {
+   padding: 13px;
+   border-radius: 50%;
+   background-color: var(--color-dark-blue);
+   box-shadow: 0 0 15px 0 rgba(53, 53, 53, 0.2);
+}
+
+.card .card-select ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.card .card-select ul li{
+   list-style: none;
+}
+
+.card .card-select ul li option{
+    padding: 13px 19px;
+    color: var(--color-light-grey);
+    background-color: var(--color-dark-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 rgba(53, 53, 53, 0.2);
+    transition: all 0.3s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+}
+.card .card-select ul li option:hover{
+    color: var(--color-white);
+    background-color: var(--color-medium-grey);
+    transition: all 0.3s;
+}
+.card .card-select ul li option:active{
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    transition: all 0.3s;
+}
+.card button{
+    cursor: pointer;
+    padding: 13px 0;
+    border: none;
+    margin-top: 15px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    letter-spacing: 1px;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    width: 100%;
+    transition: all 0.3s;
+}
+.card button:hover{
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    transition: all 0.3s;
+}
+
+
+.modal {
+    display: none;
+    opacity: 0;
+    text-align: center;
+}
+
+.modal img{
+    padding: 15px 0;
+}
+
+.modal span{
+    font-size: 13px;
+    padding: 7px 16px;
+    border-radius: 20px;
+    color: var(--color-primary);
+    background-color: var(--color-dark-blue);
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+.modal p{
+    padding: 0 15px;
+    
+}
+
+.hide .modal {
+    display: block;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.hide .card {
+    display: none;
+    opacity: 0;
+}
